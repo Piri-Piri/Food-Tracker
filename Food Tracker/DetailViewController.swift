@@ -10,11 +10,23 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    var usdaItem: USDAItem?
+    
     @IBOutlet weak var textView: UITextView!
-
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "usdaItemDidComplete:", name: kUSDAItemCompleted, object: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -23,5 +35,12 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func eatItBarButtonItemPressed(sender: UIBarButtonItem) {
+    }
+    
+    // MARK: - NSNotificationCenter
+    
+    func usdaItemDidComplete(notification: NSNotification) {
+        println("The function 'usdaItemDidComplete' in DetailViewConroller will be evaluting...")
+        self.usdaItem = notification.object as? USDAItem
     }
 }

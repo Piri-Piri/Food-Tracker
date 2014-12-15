@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import CoreData
 
+let kUSDAItemCompleted = "USDAItemInstanceComplete"
+
 class DataController {
 
     class func jsonAsUSDAIDAndNameSearchResults(json: NSDictionary) -> [(name: String, idValue: String)] {
@@ -57,11 +59,11 @@ class DataController {
                     
                     if items?.count != 0 {
                         // The item is already saved
-                        println("USDA Item is already saved!")
+                        //println("USDA Item is already saved!")
                         return
                     }
                     else {
-                        println("USDA Item will be saved to CoreData!")
+                        //println("USDA Item will be saved to CoreData!")
                         
                         let entityDescription = NSEntityDescription.entityForName("USDAItem", inManagedObjectContext: managedObjectContext!)
                         let usdaItem = USDAItem(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext!)
@@ -165,8 +167,11 @@ class DataController {
                                     usdaItem.energy = "0"
                                 }
                                 
-                                // Finaly save USDAItem
+                                // Finally save USDAItem
                                 (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
+                                
+                                // Create Notification Center
+                                NSNotificationCenter.defaultCenter().postNotificationName(kUSDAItemCompleted, object: usdaItem)
                             }
                         }
                         
