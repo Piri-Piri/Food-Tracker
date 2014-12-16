@@ -17,6 +17,7 @@
 		630FF59E1A3E218900087C41 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630FF59D1A3E218900087C41 /* DetailViewController.swift */; };
 		630FF5A01A3E3F2B00087C41 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630FF59F1A3E3F2B00087C41 /* DataController.swift */; };
 		630FF5A21A3E4C0700087C41 /* USDAItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630FF5A11A3E4C0700087C41 /* USDAItem.swift */; };
+		632C766E1A4041480040323A /* HealthStoreConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632C766D1A4041480040323A /* HealthStoreConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		630FF59D1A3E218900087C41 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		630FF59F1A3E3F2B00087C41 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		630FF5A11A3E4C0700087C41 /* USDAItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USDAItem.swift; sourceTree = "<group>"; };
+		632C766D1A4041480040323A /* HealthStoreConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthStoreConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				630FF5861A3E1FEC00087C41 /* LaunchScreen.xib */,
 				630FF57C1A3E1FEC00087C41 /* Food_Tracker.xcdatamodeld */,
 				630FF5A11A3E4C0700087C41 /* USDAItem.swift */,
+				632C766D1A4041480040323A /* HealthStoreConstant.swift */,
 				630FF5781A3E1FEC00087C41 /* Supporting Files */,
 			);
 			path = "Food Tracker";
@@ -230,6 +233,7 @@
 				630FF5A21A3E4C0700087C41 /* USDAItem.swift in Sources */,
 				630FF57B1A3E1FEC00087C41 /* AppDelegate.swift in Sources */,
 				630FF59E1A3E218900087C41 /* DetailViewController.swift in Sources */,
+				632C766E1A4041480040323A /* HealthStoreConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
